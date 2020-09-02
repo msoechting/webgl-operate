@@ -414,7 +414,7 @@ export abstract class Label {
      * Color used for background of text rendering.
      */
     set backgroundColor(color: Color) {
-        if (this._backgroundColor.equals(color)) {
+        if (this._backgroundColor && this._backgroundColor.equals(color)) {
             return;
         }
         this._backgroundColor = color;
