@@ -168,7 +168,7 @@ void main(void)
     if(a <= 0.0) {
         discard;
     }
-    fragColor = vec4(u_color.rgb, u_color.a * a);
+    fragColor = vec4(mix(vec3(1.0), u_color.rgb, u_color.a * a), 1.0);
 
     /* use when pre-multiplied color is required. */
     /* fragColor = vec4(u_color.rgb * u_color.a * a, u_color.a * a); */
